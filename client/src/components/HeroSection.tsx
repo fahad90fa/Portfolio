@@ -1,9 +1,33 @@
 import { motion } from "framer-motion";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import HeroScene from "./3D/HeroScene";
+import { Suspense, useState, useEffect } from "react";
 
 export default function HeroSection() {
   const [contentRef, isContentVisible] = useScrollAnimation<HTMLDivElement>();
   const [imageRef, isImageVisible] = useScrollAnimation<HTMLDivElement>({ delay: 300 });
+  const [is3DEnabled, setIs3DEnabled] = useState(true);
+  const [isMounted, setIsMounted] = useState(false);
+  
+  useEffect(() => {
+    setIsMounted(true);
+    
+    // Check if device might have performance issues with 3D
+    const checkPerformance = () => {
+      // Simple heuristic - mobile devices
+      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      
+      // Optional check for device memory if supported by browser
+      const nav = navigator as Navigator & { deviceMemory?: number };
+      const isLowEnd = nav.deviceMemory !== undefined && nav.deviceMemory < 4;
+      
+      if (isMobile || isLowEnd) {
+        setIs3DEnabled(false);
+      }
+    };
+    
+    checkPerformance();
+  }, []);
   
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -30,7 +54,15 @@ export default function HeroSection() {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center pt-24 pb-16 px-6 relative overflow-hidden">
-      <div className="absolute inset-0 opacity-20 dark:opacity-30 z-0">
+      {/* 3D Background */}
+      {isMounted && is3DEnabled && (
+        <Suspense fallback={null}>
+          <HeroScene />
+        </Suspense>
+      )}
+      
+      {/* Fallback background for when 3D is disabled or loading */}
+      <div className={`absolute inset-0 opacity-20 dark:opacity-30 z-0 ${is3DEnabled ? 'opacity-0' : 'opacity-20 dark:opacity-30'}`}>
         <motion.div 
           className="absolute top-20 left-20 w-96 h-96 bg-primary-500 rounded-full filter blur-[100px] opacity-30"
           animate={{ 
