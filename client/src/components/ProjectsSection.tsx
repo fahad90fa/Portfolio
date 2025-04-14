@@ -35,14 +35,15 @@ export default function ProjectsSection() {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <div className="relative">
+              <div className="relative overflow-hidden group">
                 <img 
                   src={project.image}
                   alt={project.title} 
-                  className="w-full h-48 object-cover"
+                  className="w-full h-56 object-cover transition-transform duration-700 group-hover:scale-110"
                 />
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute top-4 right-4">
-                  <span className={`px-3 py-1 ${project.categoryColor} text-white text-xs rounded-full`}>
+                  <span className={`px-3 py-1 ${project.categoryColor} text-white text-xs rounded-full shadow-md`}>
                     {project.category}
                   </span>
                 </div>
