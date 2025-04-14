@@ -22,15 +22,14 @@ export const projects: Project[] = [
     liveUrl: "https://pakgames.net"
   },
   {
-    id: "voice-assistant",
-    title: "AI Voice Assistant",
-    description: "A voice-activated assistant that uses OpenAI and ElevenLabs for natural conversations.",
-    image: "https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
-    category: "Python",
+    id: "crypto-website",
+    title: "18 Plus",
+    description: "A cutting-edge cryptocurrency trading and investment platform with real-time market data, secure wallet integration, and advanced trading tools.",
+    image: "https://images.unsplash.com/photo-1621761191319-c6fb62004040?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+    category: "Web3",
     categoryColor: "bg-secondary-500",
-    technologies: ["Python", "OpenAI", "ElevenLabs", "Whisper"],
-    liveUrl: "#",
-    githubUrl: "#"
+    technologies: ["React", "Web3.js", "Node.js", "Blockchain"],
+    liveUrl: "https://18plus.io"
   },
   {
     id: "crm-dashboard",
