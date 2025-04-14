@@ -1,7 +1,13 @@
 import { motion } from "framer-motion";
 import { projects } from "@/data/projects";
+import { useState } from "react";
 
 export default function ProjectsSection() {
+  const [showAllProjects, setShowAllProjects] = useState(false);
+  
+  // Display the first 3 projects initially, then all when "View More" is clicked
+  const displayedProjects = showAllProjects ? projects : projects.slice(0, 3);
+
   return (
     <section id="projects" className="py-20 px-6 bg-gray-50 dark:bg-dark-surface">
       <div className="container mx-auto max-w-6xl">
@@ -15,12 +21,12 @@ export default function ProjectsSection() {
           <h2 className="section-title">Featured Projects</h2>
           <div className="section-underline mx-auto"></div>
           <p className="section-subtitle">
-            A showcase of my recent development work, featuring web applications, AI integrations, and other exciting projects.
+            A showcase of my recent development work, featuring web applications, e-commerce solutions, and other exciting projects.
           </p>
         </motion.div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {displayedProjects.map((project, index) => (
             <motion.div 
               key={project.id}
               className="bg-white dark:bg-dark-card rounded-xl overflow-hidden shadow-lg card-animation"
@@ -44,7 +50,7 @@ export default function ProjectsSection() {
               
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
+                <p className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-3">
                   {project.description}
                 </p>
                 
@@ -98,15 +104,43 @@ export default function ProjectsSection() {
         </div>
         
         <div className="text-center mt-12">
-          <motion.a 
-            href="#" 
-            className="inline-flex items-center px-6 py-3 border border-gray-300 dark:border-gray-700 hover:border-primary-500 dark:hover:border-primary-500 text-gray-700 dark:text-gray-300 font-medium rounded-lg hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
-            whileHover={{ scale: 1.05, y: -5 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <span>View All Projects</span>
-            <i className="fas fa-arrow-right ml-2"></i>
-          </motion.a>
+          {!showAllProjects && projects.length > 3 ? (
+            <motion.button
+              onClick={() => setShowAllProjects(true)}
+              className="inline-flex items-center px-6 py-3 border border-gray-300 dark:border-gray-700 hover:border-primary-500 dark:hover:border-primary-500 text-gray-700 dark:text-gray-300 font-medium rounded-lg hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              whileHover={{ scale: 1.05, y: -5 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <span>View More Projects</span>
+              <svg xmlns="http://www.w3.org/2000/svg" className="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </motion.button>
+          ) : showAllProjects ? (
+            <motion.button
+              onClick={() => setShowAllProjects(false)}
+              className="inline-flex items-center px-6 py-3 border border-gray-300 dark:border-gray-700 hover:border-primary-500 dark:hover:border-primary-500 text-gray-700 dark:text-gray-300 font-medium rounded-lg hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              whileHover={{ scale: 1.05, y: -5 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <span>Show Less</span>
+              <svg xmlns="http://www.w3.org/2000/svg" className="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+              </svg>
+            </motion.button>
+          ) : (
+            <motion.a
+              href="#contact"
+              className="inline-flex items-center px-6 py-3 bg-primary-500 hover:bg-primary-600 text-white font-medium rounded-lg hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              whileHover={{ scale: 1.05, y: -5 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <span>Get In Touch</span>
+              <svg xmlns="http://www.w3.org/2000/svg" className="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+              </svg>
+            </motion.a>
+          )}
         </div>
       </div>
     </section>
