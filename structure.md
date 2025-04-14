@@ -106,8 +106,11 @@ Code shared between frontend and backend.
 - **Card animations**: Interactive card effects on hover and click
 - **Project filtering**: Filter projects by category or technology
 - **Timeline visualization**: Interactive timeline for experience section
-- **3D elements**: Three.js powered 3D elements in hero section
+- **3D particle system**: Three.js powered dynamic 3D elements in hero section
+- **Testimonial carousel**: 3D depth effect carousel with interactive controls
 - **Microinteractions**: Small animations triggered by user interactions
+- **Animated backgrounds**: Dynamic gradients and particle effects
+- **Hover-driven animations**: Elements that respond to mouse position
 
 ### Functional Features
 - **Contact form**: Email submission with validation and success/error handling
@@ -117,6 +120,34 @@ Code shared between frontend and backend.
 - **Project search**: Search functionality to find specific projects
 - **Social integration**: Displays GitHub activity and social media links
 - **Accessibility features**: Screen reader support and keyboard navigation
+- **Performance optimization**: Lazy loading, code splitting and resource optimization
+- **Autoplay controls**: User can toggle autoplay for carousel elements
+- **Personalized experience**: UI adapts based on user preferences and device capabilities
+
+### Technical Implementation Details
+
+#### 3D Particle System
+The interactive 3D background in the hero section uses Three.js to create a dynamic particle system that:
+- Responds to mouse movements for an interactive experience
+- Automatically adapts colors to match the current theme
+- Uses performance detection to disable on low-end devices
+- Incorporates smooth animations and transitions
+
+#### Testimonials 3D Carousel
+The testimonials section features a sophisticated 3D carousel that:
+- Creates a depth perspective effect for multiple testimonials
+- Includes smooth transitions between items with proper z-index handling
+- Features responsive design that adapts to different screen sizes
+- Provides multiple navigation options (dots, arrows, autoplay)
+- Dynamically adjusts card positioning based on active index
+- Includes accessibility features for better usability
+
+#### Performance Optimizations
+- Code splitting to reduce initial load time
+- Conditional rendering of heavy components
+- Responsive image handling
+- Lazy loading of off-screen content
+- Device capability detection to adjust features accordingly
 
 ## State Management
 - **Theme state**: Managed by ThemeProvider context
