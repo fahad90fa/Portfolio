@@ -12,15 +12,14 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: "ecommerce",
-    title: "E-commerce Platform",
-    description: "A modern e-commerce solution with product filtering, shopping cart, and payment integration.",
-    image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+    id: "casino-game",
+    title: "Casino Game Platform",
+    description: "A feature-rich online casino gaming platform with real-time multiplayer functionality, secure payment processing, and responsive design.",
+    image: "https://images.unsplash.com/photo-1605870445919-838d190e8e1b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
     category: "React",
     categoryColor: "bg-primary-500",
-    technologies: ["React", "Redux", "Node.js", "MySQL"],
-    liveUrl: "#",
-    githubUrl: "#"
+    technologies: ["React", "Node.js", "Socket.io", "MongoDB"],
+    liveUrl: "https://pakgames.net"
   },
   {
     id: "voice-assistant",
