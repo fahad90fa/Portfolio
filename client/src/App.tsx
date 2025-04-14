@@ -32,11 +32,9 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <ThemeProvider>
-        <AnimatePresence mode="wait">
-          <CustomCursor />
-          <Router />
-          <Toaster />
-        </AnimatePresence>
+        <CustomCursor />
+        <Router />
+        <Toaster />
       </ThemeProvider>
     </QueryClientProvider>
   );

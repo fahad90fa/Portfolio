@@ -4,10 +4,10 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
   
   const socialLinks = [
-    { icon: "fa-github", url: "#" },
-    { icon: "fa-linkedin-in", url: "#" },
+    { icon: "fa-facebook-f", url: "#" },
+    { icon: "fa-instagram", url: "#" },
     { icon: "fa-whatsapp", url: "#" },
-    { icon: "fa-twitter", url: "#" }
+    { icon: "fa-telegram", url: "#" }
   ];
 
   return (
@@ -22,9 +22,9 @@ export default function Footer() {
             transition={{ duration: 0.5 }}
           >
             <span className="text-2xl font-bold bg-gradient-to-r from-primary-400 to-secondary-400 text-transparent bg-clip-text">
-              Fahad.
+              PakGame.net
             </span>
-            <p className="text-gray-400 mt-2">Full-Stack Developer</p>
+            <p className="text-gray-400 mt-2">Premium Online Casino</p>
           </motion.div>
           
           <motion.div 
@@ -49,7 +49,7 @@ export default function Footer() {
             </div>
             
             <p className="text-gray-500 text-sm">
-              &copy; {currentYear} Fahad. All rights reserved.
+              &copy; {currentYear} PakGame.net. All rights reserved. 18+
             </p>
           </motion.div>
         </div>

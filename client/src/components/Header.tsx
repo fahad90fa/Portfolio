@@ -18,11 +18,11 @@ export default function Header() {
   
   const navLinks = [
     { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Skills", href: "#skills" },
-    { name: "Projects", href: "#projects" },
-    { name: "Experience", href: "#experience" },
-    { name: "Contact", href: "#contact" },
+    { name: "About Us", href: "#about" },
+    { name: "Features", href: "#skills" },
+    { name: "Games", href: "#projects" },
+    { name: "Bonuses", href: "#experience" },
+    { name: "Support", href: "#contact" },
   ];
   
   const headerVariants = {
@@ -54,8 +54,12 @@ export default function Header() {
       >
         <div className="flex items-center space-x-2">
           <span className="text-2xl font-bold bg-gradient-to-r from-primary-500 to-secondary-500 text-transparent bg-clip-text">
-            Fahad.
+            PakGame.net
           </span>
+          <div className="hidden sm:flex items-center ml-2 px-2 py-1 bg-yellow-100 dark:bg-yellow-900 rounded text-xs text-yellow-800 dark:text-yellow-400 font-medium">
+            <i className="fas fa-certificate text-yellow-500 mr-1"></i>
+            <span>Licensed & Secure</span>
+          </div>
         </div>
         
         <div className="hidden md:flex space-x-8">
@@ -74,7 +78,16 @@ export default function Header() {
           ))}
         </div>
         
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-3">
+          <motion.a
+            href="https://pakgame.net/login"
+            className="hidden sm:flex px-4 py-2 bg-gradient-to-r from-primary-500 to-secondary-500 text-white font-medium rounded-lg"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Login / Register
+          </motion.a>
+          
           <motion.button
             onClick={toggleTheme}
             className="p-2 rounded-full bg-gray-100 dark:bg-dark-card text-gray-700 dark:text-gray-300"
@@ -121,6 +134,17 @@ export default function Header() {
                   {link.name}
                 </motion.a>
               ))}
+              
+              <motion.a
+                href="https://pakgame.net/login"
+                className="mt-2 px-4 py-2 bg-gradient-to-r from-primary-500 to-secondary-500 text-white font-medium rounded-lg text-center"
+                onClick={() => setMobileMenuOpen(false)}
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6 }}
+              >
+                Login / Register
+              </motion.a>
             </div>
           </motion.div>
         )}

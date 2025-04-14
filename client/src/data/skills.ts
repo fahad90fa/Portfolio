@@ -15,84 +15,81 @@ export interface SkillCategory {
 
 export const skillCategories: SkillCategory[] = [
   {
-    id: "frontend",
-    title: "Frontend Development",
-    icon: "fa-code",
+    id: "slots",
+    title: "Slot Games",
+    icon: "fa-dice-d6",
     skills: [
-      { name: "HTML5", icon: "fa-html5", color: "text-orange-500", type: "brand" },
-      { name: "CSS3", icon: "fa-css3-alt", color: "text-blue-500", type: "brand" },
-      { name: "JavaScript", icon: "fa-js", color: "text-yellow-500", type: "brand" },
-      { name: "React", icon: "fa-react", color: "text-blue-400", type: "brand" },
-      { 
-        name: "Tailwind", 
-        icon: "", 
-        color: "", 
-        type: "custom-svg",
-        svgPath: `<path d="M9 13.7l6.5-3.8 6.5 3.8v7.6l-6.5 3.8L9 21.3v-7.6z" fill="#38BDF8"/>`
-      },
-      { 
-        name: "TypeScript", 
-        icon: "", 
-        color: "", 
-        type: "custom-svg",
-        svgPath: `<path d="M11.107 0v24l-6.55-3.638V4.15L11.107 0z" fill="#3178C6"/>
-                  <path d="M17.6 3.428L11.107 0v24l6.493-3.696V3.428z" fill="#3178C6"/>`
-      }
+      { name: "Classic Slots", icon: "fa-dice", color: "text-orange-500", type: "regular" },
+      { name: "Video Slots", icon: "fa-tv", color: "text-blue-500", type: "regular" },
+      { name: "Progressive", icon: "fa-trophy", color: "text-yellow-500", type: "regular" },
+      { name: "3D Slots", icon: "fa-cube", color: "text-blue-400", type: "regular" },
+      { name: "Mega Spins", icon: "fa-bolt", color: "text-purple-500", type: "regular" },
+      { name: "Bonus Rounds", icon: "fa-gift", color: "text-red-500", type: "regular" }
     ]
   },
   {
-    id: "backend",
-    title: "Backend & Database",
-    icon: "fa-server",
+    id: "table-games",
+    title: "Table Games",
+    icon: "fa-table",
     skills: [
-      { name: "Node.js", icon: "fa-node-js", color: "text-green-600", type: "brand" },
-      { name: "Python", icon: "fa-python", color: "text-blue-600", type: "brand" },
-      { 
-        name: "MySQL", 
-        icon: "", 
-        color: "", 
-        type: "custom-svg",
-        svgPath: `<path d="M16.405 5.501H9.475v2.969h4.414c-.208 1.686-1.6 2.939-4.414 2.939-2.71 0-4.868-2.167-4.868-4.879S6.764 1.65 9.475 1.65c1.715 0 2.781.861 3.424 1.601l2.246-2.246c-1.533-1.533-3.52-2.47-5.67-2.47C4.375-1.465 0 2.946 0 7.53S4.375 16.525 9.475 16.525c4.77 0 9.037-3.412 9.037-9.037 0-.58-.056-1.282-.163-1.987z" fill="#4285F4"/>`
-      }
+      { name: "Blackjack", icon: "fa-coins", color: "text-green-600", type: "regular" },
+      { name: "Roulette", icon: "fa-circle", color: "text-red-600", type: "regular" },
+      { name: "Baccarat", icon: "fa-money-bill", color: "text-blue-600", type: "regular" },
+      { name: "Craps", icon: "fa-dice-five", color: "text-yellow-600", type: "regular" },
+      { name: "Poker", icon: "fa-spade", color: "text-gray-800", type: "regular" },
+      { name: "Sic Bo", icon: "fa-dice-three", color: "text-purple-600", type: "regular" }
     ]
   },
   {
-    id: "ai",
-    title: "AI & Voice Assistant",
-    icon: "fa-microchip",
+    id: "live-dealer",
+    title: "Live Dealer Games",
+    icon: "fa-video",
     skills: [
-      { name: "OpenAI API", icon: "fa-robot", color: "text-purple-500", type: "regular" },
-      { name: "ElevenLabs", icon: "fa-volume-up", color: "text-blue-500", type: "regular" },
-      { name: "Speech-to-Text", icon: "fa-comment", color: "text-red-500", type: "regular" }
+      { name: "Live Blackjack", icon: "fa-users", color: "text-purple-500", type: "regular" },
+      { name: "Live Roulette", icon: "fa-sync", color: "text-blue-500", type: "regular" },
+      { name: "Live Baccarat", icon: "fa-crown", color: "text-red-500", type: "regular" },
+      { name: "Game Shows", icon: "fa-star", color: "text-yellow-500", type: "regular" },
+      { name: "VIP Tables", icon: "fa-gem", color: "text-indigo-500", type: "regular" },
+      { name: "Poker Rooms", icon: "fa-user-friends", color: "text-green-500", type: "regular" }
     ]
   },
   {
-    id: "automation",
-    title: "Python Automation",
-    icon: "fa-cogs",
+    id: "sports",
+    title: "Sports Betting",
+    icon: "fa-futbol",
     skills: [
-      { name: "Selenium", icon: "fa-spider", color: "text-gray-700 dark:text-gray-300", type: "regular" },
-      { name: "BeautifulSoup", icon: "fa-hamburger", color: "text-yellow-600", type: "regular" }
+      { name: "Football", icon: "fa-football-ball", color: "text-gray-700 dark:text-gray-300", type: "regular" },
+      { name: "Cricket", icon: "fa-baseball-ball", color: "text-yellow-600", type: "regular" },
+      { name: "Tennis", icon: "fa-table-tennis", color: "text-green-600", type: "regular" },
+      { name: "Basketball", icon: "fa-basketball-ball", color: "text-orange-600", type: "regular" },
+      { name: "E-Sports", icon: "fa-gamepad", color: "text-purple-600", type: "regular" },
+      { name: "Horse Racing", icon: "fa-horse", color: "text-brown-600", type: "regular" }
     ]
   },
   {
-    id: "cms",
-    title: "Content Management",
-    icon: "fa-file-alt",
+    id: "payments",
+    title: "Payment Methods",
+    icon: "fa-credit-card",
     skills: [
-      { name: "WordPress", icon: "fa-wordpress", color: "text-blue-800", type: "brand" },
-      { name: "Shopify", icon: "fa-shopping-bag", color: "text-green-600", type: "regular" },
-      { name: "WooCommerce", icon: "fa-store", color: "text-purple-700", type: "regular" }
+      { name: "Credit Cards", icon: "fa-credit-card", color: "text-blue-800", type: "regular" },
+      { name: "E-Wallets", icon: "fa-wallet", color: "text-green-600", type: "regular" },
+      { name: "Bank Transfer", icon: "fa-university", color: "text-gray-600", type: "regular" },
+      { name: "Cryptocurrencies", icon: "fa-bitcoin", color: "text-orange-500", type: "brand" },
+      { name: "Mobile Payments", icon: "fa-mobile-alt", color: "text-blue-500", type: "regular" },
+      { name: "Prepaid Cards", icon: "fa-money-check", color: "text-purple-500", type: "regular" }
     ]
   },
   {
-    id: "api",
-    title: "API Integrations",
-    icon: "fa-plug",
+    id: "features",
+    title: "Special Features",
+    icon: "fa-star",
     skills: [
-      { name: "Twilio", icon: "fa-phone", color: "text-red-500", type: "regular" },
-      { name: "WhatsApp API", icon: "fa-whatsapp", color: "text-green-500", type: "brand" },
-      { name: "Salesforce", icon: "fa-briefcase", color: "text-blue-500", type: "regular" }
+      { name: "VIP Program", icon: "fa-medal", color: "text-yellow-500", type: "regular" },
+      { name: "Tournaments", icon: "fa-trophy", color: "text-yellow-600", type: "regular" },
+      { name: "Mobile App", icon: "fa-mobile-alt", color: "text-blue-500", type: "regular" },
+      { name: "Live Chat", icon: "fa-comments", color: "text-green-500", type: "regular" },
+      { name: "Fast Payouts", icon: "fa-bolt", color: "text-orange-500", type: "regular" },
+      { name: "Bonuses", icon: "fa-gift", color: "text-red-500", type: "regular" }
     ]
   }
 ];

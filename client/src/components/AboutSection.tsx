@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 
 export default function AboutSection() {
   const stats = [
-    { value: "30+", label: "Projects" },
-    { value: "15+", label: "Clients" },
-    { value: "10+", label: "Technologies" },
-    { value: "3+", label: "Years" }
+    { value: "500+", label: "Games" },
+    { value: "10K+", label: "Players" },
+    { value: "24/7", label: "Support" },
+    { value: "5+", label: "Years" }
   ];
 
   return (
@@ -26,8 +26,8 @@ export default function AboutSection() {
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <img 
-                  src="https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80" 
-                  alt="Tech workspace" 
+                  src="https://images.unsplash.com/photo-1590593162201-f67611a18b87?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80" 
+                  alt="Casino games" 
                   className="w-full h-auto object-cover"
                 />
               </motion.div>
@@ -39,7 +39,7 @@ export default function AboutSection() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.3, duration: 0.5 }}
               >
-                <span className="text-6xl text-white font-bold">3+</span>
+                <span className="text-6xl text-white font-bold">5+</span>
               </motion.div>
               
               <motion.div 
@@ -49,8 +49,8 @@ export default function AboutSection() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.5, duration: 0.5 }}
               >
-                <span className="text-lg font-medium text-gray-700 dark:text-gray-300">Years of</span>
-                <p className="text-xl font-bold text-gray-900 dark:text-white">Experience</p>
+                <span className="text-lg font-medium text-gray-700 dark:text-gray-300">Years in</span>
+                <p className="text-xl font-bold text-gray-900 dark:text-white">Gaming Industry</p>
               </motion.div>
             </div>
           </motion.div>
@@ -62,7 +62,7 @@ export default function AboutSection() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <h2 className="section-title">About Me</h2>
+            <h2 className="section-title">About PakGame.net</h2>
             <div className="section-underline"></div>
             
             <motion.p 
@@ -72,8 +72,8 @@ export default function AboutSection() {
               viewport={{ once: true }}
               transition={{ delay: 0.3, duration: 0.5 }}
             >
-              I'm Fahad, a passionate Full-Stack Developer from Pakistan currently pursuing ICS Stats at Punjab College.
-              I specialize in creating visually stunning and functionally robust web applications with a focus on user experience.
+              PakGame.net is a premium online casino platform offering a wide range of gaming experiences from classic slots 
+              and table games to live dealers and sports betting, all with stunning graphics and seamless gameplay.
             </motion.p>
             
             <motion.p 
@@ -83,8 +83,8 @@ export default function AboutSection() {
               viewport={{ once: true }}
               transition={{ delay: 0.4, duration: 0.5 }}
             >
-              My journey in web development started with a curiosity to create something meaningful and evolved into a professional 
-              career where I combine creative design with technical problem-solving.
+              Our platform features industry-leading security protocols, fast payment processing, and a user-friendly interface
+              designed to provide the most immersive gaming experience possible across all devices.
             </motion.p>
             
             <motion.p 
@@ -94,8 +94,8 @@ export default function AboutSection() {
               viewport={{ once: true }}
               transition={{ delay: 0.5, duration: 0.5 }}
             >
-              When I'm not coding, I'm expanding my knowledge in AI and voice assistant technologies, and looking for innovative
-              ways to integrate these into practical applications.
+              With 24/7 customer support, regular bonuses, and frequent new game releases, we're committed to providing 
+              our players with the most engaging and rewarding online casino experience in the industry.
             </motion.p>
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">

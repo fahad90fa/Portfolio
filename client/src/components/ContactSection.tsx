@@ -75,7 +75,7 @@ export default function ContactSection() {
       
       toast({
         title: "Message sent!",
-        description: "Thank you for your message. I'll get back to you soon.",
+        description: "Thank you for your message. Our support team will respond within 24 hours.",
       });
       
       // Reset form
@@ -98,16 +98,16 @@ export default function ContactSection() {
   };
   
   const contactInfo = [
-    { icon: "fa-envelope", label: "Email", value: "fahad@example.com" },
-    { icon: "fa-phone", label: "Phone", value: "+92 XXX XXXXXXX" },
-    { icon: "fa-map-marker-alt", label: "Location", value: "Punjab, Pakistan" }
+    { icon: "fa-envelope", label: "Email", value: "support@pakgame.net" },
+    { icon: "fa-phone", label: "Phone", value: "+92 300 1234567" },
+    { icon: "fa-headset", label: "Live Chat", value: "24/7 Support" }
   ];
   
   const socialLinks = [
-    { icon: "fa-github", url: "#" },
-    { icon: "fa-linkedin-in", url: "#" },
+    { icon: "fa-facebook-f", url: "#" },
+    { icon: "fa-instagram", url: "#" },
     { icon: "fa-whatsapp", url: "#" },
-    { icon: "fa-twitter", url: "#" }
+    { icon: "fa-telegram", url: "#" }
   ];
 
   return (
@@ -120,10 +120,10 @@ export default function ContactSection() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="section-title">Get In Touch</h2>
+          <h2 className="section-title">Contact Us</h2>
           <div className="section-underline mx-auto"></div>
           <p className="section-subtitle">
-            Interested in working together? Have a project in mind? Feel free to reach out!
+            Need help or have a question? Our customer support team is available 24/7 to assist you.
           </p>
         </motion.div>
         
@@ -168,7 +168,7 @@ export default function ContactSection() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.4, duration: 0.5 }}
               >
-                <h4 className="text-lg font-bold mb-4">Connect With Me</h4>
+                <h4 className="text-lg font-bold mb-4">Follow Us</h4>
                 <div className="flex space-x-4">
                   {socialLinks.map((link, index) => (
                     <motion.a 
@@ -194,7 +194,7 @@ export default function ContactSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <div className="bg-white dark:bg-dark-card p-8 rounded-xl shadow-lg h-full card-animation">
-              <h3 className="text-xl font-bold mb-6">Send Me a Message</h3>
+              <h3 className="text-xl font-bold mb-6">Send Us a Message</h3>
               
               <form onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -236,7 +236,7 @@ export default function ContactSection() {
                     value={formData.subject}
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-dark-surface text-gray-800 dark:text-gray-200 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-300"
-                    placeholder="Project Inquiry"
+                    placeholder="Account Issue, Payment Question, etc."
                     required
                   />
                 </div>
