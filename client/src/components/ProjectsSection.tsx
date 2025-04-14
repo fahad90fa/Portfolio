@@ -12,10 +12,10 @@ export default function ProjectsSection() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="section-title">PakGame.net Features</h2>
+          <h2 className="section-title">Featured Projects</h2>
           <div className="section-underline mx-auto"></div>
           <p className="section-subtitle">
-            Explore our premium casino gaming platform with interactive games, live dealers, and secure payment systems.
+            A showcase of my recent development work, featuring web applications, AI integrations, and other exciting projects.
           </p>
         </motion.div>
         
@@ -59,7 +59,7 @@ export default function ProjectsSection() {
                   ))}
                 </div>
                 
-                <div className="flex">
+                <div className="flex justify-between">
                   {project.liveUrl && (
                     <motion.a 
                       href={project.liveUrl} 
@@ -67,8 +67,20 @@ export default function ProjectsSection() {
                       whileHover={{ x: 3 }}
                       transition={{ type: "spring", stiffness: 300 }}
                     >
-                      <span>Play Now</span>
+                      <span>Live Demo</span>
                       <i className="fas fa-external-link-alt ml-1"></i>
+                    </motion.a>
+                  )}
+                  
+                  {project.githubUrl && (
+                    <motion.a 
+                      href={project.githubUrl} 
+                      className="text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 font-medium flex items-center"
+                      whileHover={{ x: 3 }}
+                      transition={{ type: "spring", stiffness: 300 }}
+                    >
+                      <i className="fab fa-github mr-1"></i>
+                      <span>GitHub</span>
                     </motion.a>
                   )}
                 </div>
@@ -79,13 +91,13 @@ export default function ProjectsSection() {
         
         <div className="text-center mt-12">
           <motion.a 
-            href="https://pakgame.net/games" 
+            href="#" 
             className="inline-flex items-center px-6 py-3 border border-gray-300 dark:border-gray-700 hover:border-primary-500 dark:hover:border-primary-500 text-gray-700 dark:text-gray-300 font-medium rounded-lg hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
             whileHover={{ scale: 1.05, y: -5 }}
             whileTap={{ scale: 0.95 }}
           >
-            <span>Explore All Games</span>
-            <i className="fas fa-gamepad ml-2"></i>
+            <span>View All Projects</span>
+            <i className="fas fa-arrow-right ml-2"></i>
           </motion.a>
         </div>
       </div>

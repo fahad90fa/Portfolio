@@ -79,54 +79,67 @@ export default function HeroSection() {
           >
             <motion.div className="mb-4" variants={itemVariants}>
               <span className="px-4 py-2 rounded-full text-sm font-medium bg-primary-100 dark:bg-dark-card text-primary-600 dark:text-primary-400">
-                Premium Casino Experience
+                Full-Stack Developer
               </span>
             </motion.div>
             
             <motion.h1 className="text-4xl md:text-6xl font-bold mb-6" variants={itemVariants}>
-              <span>Welcome to </span>
-              <span className="bg-gradient-to-r from-primary-500 via-secondary-500 to-accent-500 text-transparent bg-clip-text">PakGame.net</span>
+              <span>Hi, I'm </span>
+              <span className="bg-gradient-to-r from-primary-500 via-secondary-500 to-accent-500 text-transparent bg-clip-text">Fahad</span>
             </motion.h1>
             
             <motion.p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-8" variants={itemVariants}>
-              Experience the thrill of premium online casino gaming with stunning graphics,
-              live dealers, and secure payments. Play from anywhere, anytime.
+              Building responsive, animated, and visually stunning web applications.
+              Specialized in React.js, Tailwind CSS, and creating smooth user experiences.
             </motion.p>
             
             <motion.div className="flex flex-wrap gap-4" variants={itemVariants}>
               <motion.a 
-                href="https://pakgame.net/register" 
+                href="#projects" 
                 className="px-6 py-3 bg-gradient-to-r from-primary-500 to-secondary-500 text-white font-medium rounded-lg hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Join Now
+                View My Work
               </motion.a>
               <motion.a 
-                href="#projects" 
+                href="#contact" 
                 className="px-6 py-3 border border-gray-300 dark:border-gray-700 hover:border-primary-500 dark:hover:border-primary-500 text-gray-700 dark:text-gray-300 font-medium rounded-lg hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Explore Games
+                Contact Me
               </motion.a>
             </motion.div>
             
             <motion.div className="flex space-x-4 mt-8" variants={itemVariants}>
-              <motion.div 
-                className="px-3 py-1 bg-green-100 dark:bg-green-900 rounded-lg flex items-center"
-                whileHover={{ scale: 1.05 }}
+              <motion.a 
+                href="https://github.com/" 
+                target="_blank" 
+                className="text-gray-600 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-400 text-2xl"
+                whileHover={{ scale: 1.2, rotate: 5 }}
+                whileTap={{ scale: 0.9 }}
               >
-                <div className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></div>
-                <span className="text-sm text-green-700 dark:text-green-400 font-medium">2,500+ Active Players</span>
-              </motion.div>
-              <motion.div 
-                className="px-3 py-1 bg-yellow-100 dark:bg-yellow-900 rounded-lg flex items-center"
-                whileHover={{ scale: 1.05 }}
+                <i className="fab fa-github"></i>
+              </motion.a>
+              <motion.a 
+                href="https://linkedin.com/" 
+                target="_blank" 
+                className="text-gray-600 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-400 text-2xl"
+                whileHover={{ scale: 1.2, rotate: 5 }}
+                whileTap={{ scale: 0.9 }}
               >
-                <i className="fas fa-trophy text-yellow-500 mr-2"></i>
-                <span className="text-sm text-yellow-700 dark:text-yellow-400 font-medium">Daily Jackpots</span>
-              </motion.div>
+                <i className="fab fa-linkedin"></i>
+              </motion.a>
+              <motion.a 
+                href="https://wa.me/1234567890" 
+                target="_blank" 
+                className="text-gray-600 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-400 text-2xl"
+                whileHover={{ scale: 1.2, rotate: 5 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <i className="fab fa-whatsapp"></i>
+              </motion.a>
             </motion.div>
           </motion.div>
           
@@ -152,8 +165,8 @@ export default function HeroSection() {
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary-500 to-secondary-500 opacity-30 blur-xl animate-pulse-slow"></div>
               <div className="absolute inset-4 rounded-full bg-gradient-to-r from-primary-500 to-secondary-500 overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1606167668584-78701c57f13d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=760&q=80" 
-                  alt="PakGame.net Casino" 
+                  src="https://images.unsplash.com/photo-1595431548072-a187daab72b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=760&q=80" 
+                  alt="Fahad - Full-Stack Developer" 
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -171,7 +184,7 @@ export default function HeroSection() {
                   animate={{ scale: [1, 1.2, 1] }}
                   transition={{ duration: 2, repeat: Infinity }}
                 />
-                <span className="text-sm font-medium">247 Support Available</span>
+                <span className="text-sm font-medium">Available for projects</span>
               </div>
             </motion.div>
           </motion.div>

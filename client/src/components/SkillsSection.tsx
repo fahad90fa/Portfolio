@@ -34,11 +34,11 @@ export default function SkillsSection() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="section-title">Game Features</h2>
+          <h2 className="section-title">My Technical Skills</h2>
           <div className="section-underline mx-auto"></div>
           <p className="section-subtitle">
-            PakGame.net offers a diverse selection of casino games, betting options, and convenient payment methods.
-            Explore our feature-rich platform and experience the thrill of premium online casino gaming.
+            I've worked with a variety of technologies in the web development and AI integration space.
+            Here's a comprehensive breakdown of my technical toolkit.
           </p>
         </motion.div>
         
