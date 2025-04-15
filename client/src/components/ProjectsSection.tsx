@@ -35,15 +35,21 @@ export default function ProjectsSection() {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <div className="relative overflow-hidden group">
+              <div className="relative overflow-hidden group bg-gradient-to-r from-gray-900 to-gray-800">
+                <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHg9IjAiIHk9IjAiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDEwIEwgMTAgMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMSkiIHN0cm9rZS13aWR0aD0iMC41Ii8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-40"></div>
                 <img 
                   src={project.image}
                   alt={project.title} 
-                  className="w-full h-56 object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-56 object-cover mix-blend-overlay opacity-60 transition-all duration-700 group-hover:opacity-40"
                 />
-                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute top-4 right-4">
-                  <span className={`px-3 py-1 ${project.categoryColor} text-white text-xs rounded-full shadow-md`}>
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-secondary-500/20 group-hover:opacity-75 transition-opacity duration-300"></div>
+                <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="transform -rotate-12 bg-white/10 backdrop-blur-sm px-6 py-2 rounded-lg border border-white/20">
+                    <span className="text-white font-mono tracking-wider">{project.category}</span>
+                  </div>
+                </div>
+                <div className="absolute top-4 right-4 z-10">
+                  <span className={`px-3 py-1 bg-black/50 backdrop-blur-sm border border-${project.categoryColor.split('bg-')[1]}/50 text-white text-xs rounded-full shadow-lg`}>
                     {project.category}
                   </span>
                 </div>
