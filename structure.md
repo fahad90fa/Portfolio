@@ -42,6 +42,8 @@ The frontend React application.
   - `/client/src/components/ProjectsSection.tsx` - Projects gallery
   - `/client/src/components/ExperienceSection.tsx` - Work experience timeline
   - `/client/src/components/ContactSection.tsx` - Contact form and info
+  - `/client/src/components/TestimonialsSection.tsx` - Client testimonials carousel
+
 
 - `/client/src/pages/` - Page components
   - `/client/src/pages/Home.tsx` - Main landing page combining all sections
@@ -51,6 +53,8 @@ The frontend React application.
   - `/client/src/data/skills.ts` - Skills data and categories
   - `/client/src/data/projects.ts` - Project portfolio data
   - `/client/src/data/experience.ts` - Work experience data
+  - `/client/src/data/testimonials.ts` - Client testimonial data
+
 
 - `/client/src/hooks/` - Custom React hooks
   - `/client/src/hooks/use-toast.ts` - Toast notification system
@@ -81,16 +85,17 @@ Code shared between frontend and backend.
 
 ### Layout Components
 - **Header**: Navigation bar with links to different sections and theme toggle
-- **Footer**: Site footer with copyright, social links, and navigation
+- **Footer**: Site footer with copyright and social links (LinkedIn, WhatsApp, Twitter)
 - **ThemeProvider**: Context provider for theme state (dark/light mode)
 
 ### Section Components
 - **HeroSection**: Main landing section with introduction and call-to-action
 - **AboutSection**: Information about the portfolio owner with image and description
 - **SkillsSection**: Skills showcase with categorized skill items and visual indicators
-- **ProjectsSection**: Project gallery with filtering, search, and interactive cards
-- **ExperienceSection**: Work experience timeline with interactive elements
+- **ProjectsSection**: Project gallery with crypto-style banner and interactive cards
+- **ExperienceSection**: Right-aligned timeline with experience cards and interactive animations
 - **ContactSection**: Contact form with validation and submission handling
+- **TestimonialsSection**: Client feedback carousel with 1-second autoplay timer
 
 ### UI Components
 - **Custom shadcn/ui components**: Button, Card, Dialog, Dropdown, etc.
