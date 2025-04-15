@@ -83,21 +83,7 @@ export default function ProjectsSection() {
                     </motion.a>
                   )}
                   
-                  {project.githubUrl && (
-                    <motion.a 
-                      href={project.githubUrl}
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 font-medium flex items-center"
-                      whileHover={{ x: 3 }}
-                      transition={{ type: "spring", stiffness: 300 }}
-                    >
-                      <span>Source Code</span>
-                      <svg xmlns="http://www.w3.org/2000/svg" className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                      </svg>
-                    </motion.a>
-                  )}
+                  
                 </div>
               </div>
             </motion.div>

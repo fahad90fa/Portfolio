@@ -7,7 +7,6 @@ export interface Project {
   categoryColor: string;
   technologies: string[];
   liveUrl?: string;
-  githubUrl?: string;
 }
 
 export const projects: Project[] = [
