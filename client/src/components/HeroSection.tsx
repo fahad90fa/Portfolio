@@ -146,15 +146,6 @@ export default function HeroSection() {
             
             <motion.div className="flex space-x-4 mt-8" variants={itemVariants}>
               <motion.a 
-                href="https://github.com/" 
-                target="_blank" 
-                className="text-gray-600 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-400 text-2xl"
-                whileHover={{ scale: 1.2, rotate: 5 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <i className="fab fa-github"></i>
-              </motion.a>
-              <motion.a 
                 href="https://linkedin.com/" 
                 target="_blank" 
                 className="text-gray-600 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-400 text-2xl"
