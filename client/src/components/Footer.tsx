@@ -6,7 +6,7 @@ export default function Footer() {
   const socialLinks = [
     { icon: "fa-linkedin-in", url: "#" },
     { icon: "fa-whatsapp", url: "#" },
-    { icon: "fa-twitter", url: "#" }
+    
   ];
 
   return (
@@ -21,7 +21,7 @@ export default function Footer() {
             transition={{ duration: 0.5 }}
           >
             <span className="text-2xl font-bold bg-gradient-to-r from-primary-400 to-secondary-400 text-transparent bg-clip-text">
-              Fahad.
+              Fahad Bin Yousaf
             </span>
             <p className="text-gray-400 mt-2">Full-Stack Developer</p>
           </motion.div>

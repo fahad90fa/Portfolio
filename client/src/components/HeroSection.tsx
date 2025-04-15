@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import HeroScene from "./3D/HeroScene";
 import { Suspense, useState, useEffect } from "react";
+import fahadImage from '../images/fahad.jpg';
+
 
 export default function HeroSection() {
   const [contentRef, isContentVisible] = useScrollAnimation<HTMLDivElement>();
@@ -121,8 +123,7 @@ export default function HeroSection() {
             </motion.h1>
             
             <motion.p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-8" variants={itemVariants}>
-              Building responsive, animated, and visually stunning web applications.
-              Specialized in React.js, Tailwind CSS, and creating smooth user experiences.
+            Creative and results-driven Full Stack Developer with a strong foundation in web and mobile application development, AI-powered solutions, and software engineering. Proficient in building dynamic, user-focused applications using modern technologies like React, Node.js, Android (Java/Kotlin), and Python. Skilled in developing intelligent AI agents, integrating APIs, and automating complex workflows. Passionate about building high-performance, scalable systems and delivering clean, maintainable code. Adept at working across the full development lifecycle—from concept to deployment—with a sharp eye for detail and performance optimization.
             </motion.p>
             
             <motion.div className="flex flex-wrap gap-4" variants={itemVariants}>
@@ -146,7 +147,7 @@ export default function HeroSection() {
             
             <motion.div className="flex space-x-4 mt-8" variants={itemVariants}>
               <motion.a 
-                href="https://linkedin.com/" 
+                href="https://linkedin.com/in/fahad-bin-yousaf" 
                 target="_blank" 
                 className="text-gray-600 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-400 text-2xl"
                 whileHover={{ scale: 1.2, rotate: 5 }}
@@ -155,7 +156,7 @@ export default function HeroSection() {
                 <i className="fab fa-linkedin"></i>
               </motion.a>
               <motion.a 
-                href="https://wa.me/1234567890" 
+                href="https://wa.me/+923320407479" 
                 target="_blank" 
                 className="text-gray-600 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-400 text-2xl"
                 whileHover={{ scale: 1.2, rotate: 5 }}
@@ -188,7 +189,7 @@ export default function HeroSection() {
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary-500 to-secondary-500 opacity-30 blur-xl animate-pulse-slow"></div>
               <div className="absolute inset-4 rounded-full bg-gradient-to-r from-primary-500 to-secondary-500 overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1595431548072-a187daab72b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=760&q=80" 
+                  src={fahadImage}
                   alt="Fahad - Full-Stack Developer" 
                   className="w-full h-full object-cover"
                 />

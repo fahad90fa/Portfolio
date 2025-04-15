@@ -25,7 +25,7 @@ export const experiences: Experience[] = [
     period: "2020 - 2022",
     description: "Developed responsive user interfaces using React.js and Tailwind CSS. Collaborated with design team to implement modern UI/UX solutions.",
     color: "border-secondary-500",
-    position: "right"
+    position: "left"
   },
   {
     id: "exp3",

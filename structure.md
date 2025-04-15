@@ -167,9 +167,3 @@ The testimonials section features a sophisticated 3D carousel that:
 - **Dark mode support**: Using Tailwind's dark: variant with theme context
 - **Responsive design**: Mobile-first approach with responsive breakpoints
 
-## Deployment
-The application is deployed on Replit, which handles:
-- Automatic HTTPS
-- CI/CD pipeline
-- Environment variables for API keys
-- CDN for static asset delivery

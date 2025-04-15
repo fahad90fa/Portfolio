@@ -33,8 +33,8 @@ export default function ExperienceSection() {
               transition={{ duration: 0.6, delay: index * 0.2 }}
             >
               {/* Left side for even items (or all on mobile) */}
-              <div className={`md:w-1/2 ${exp.position === 'left' ? 'md:pr-12 md:text-right order-2 md:order-1' : 'md:pr-12 order-2'}`}>
-                {exp.position === 'left' && (
+              <div className={`md:w-1/2 ${exp.company === 'Digital Innovators Inc.' ? 'md:pl-12 order-1' : (exp.position === 'left' ? 'md:pr-12 md:text-right order-2 md:order-1' : 'md:pr-12 order-2')}`}>
+                {exp.company !== 'Digital Innovators Inc.' && exp.position === 'left' && (
                   <motion.div 
                     className="bg-white dark:bg-dark-card p-6 rounded-xl shadow-lg card-animation"
                     whileHover={{ y: -5 }}
@@ -60,9 +60,9 @@ export default function ExperienceSection() {
                 transition={{ delay: 0.3, duration: 0.5, type: "spring" }}
               />
               
-              {/* Right side for odd items */}
-              <div className={`md:w-1/2 ${exp.position === 'right' ? 'md:pl-12 md:text-left order-1' : 'md:pl-12 order-1 md:order-2'}`}>
-                {exp.position === 'right' && (
+              {/* Right side for Digital Innovators Inc. or odd items */}
+              <div className={`md:w-1/2 ${exp.company === 'Digital Innovators Inc.' ? 'md:pl-12 md:text-left order-1' : (exp.position === 'right' ? 'md:pl-12 md:text-left order-1' : 'md:pl-12 order-1 md:order-2')}`}>
+                {(exp.position === 'right' || exp.company === 'Digital Innovators Inc.') && (
                   <motion.div 
                     className="bg-white dark:bg-dark-card p-6 rounded-xl shadow-lg card-animation mt-4 md:mt-0"
                     whileHover={{ y: -5 }}

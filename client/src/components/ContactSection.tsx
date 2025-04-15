@@ -98,15 +98,15 @@ export default function ContactSection() {
   };
   
   const contactInfo = [
-    { icon: "fa-envelope", label: "Email", value: "fahad@example.com" },
-    { icon: "fa-phone", label: "Phone", value: "+92 XXX XXXXXXX" },
-    { icon: "fa-map-marker-alt", label: "Location", value: "Punjab, Pakistan" }
+    { icon: "fa-envelope", label: "Email", value: "fahad1562009@gmail.com" },
+    { icon: "fa-phone", label: "Phone", value: "+92 332 0407479" },
+    { icon: "fa-map-marker-alt", label: "Location", value: "Gujranwala, Punjab, Pakistan" }
   ];
   
   const socialLinks = [
     { icon: "fa-linkedin-in", url: "#" },
     { icon: "fa-whatsapp", url: "#" },
-    { icon: "fa-twitter", url: "#" }
+    
   ];
 
   return (

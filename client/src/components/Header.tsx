@@ -54,7 +54,7 @@ export default function Header() {
       >
         <div className="flex items-center space-x-2">
           <span className="text-2xl font-bold bg-gradient-to-r from-primary-500 to-secondary-500 text-transparent bg-clip-text">
-            Fahad.
+          Portfolio
           </span>
         </div>
         
