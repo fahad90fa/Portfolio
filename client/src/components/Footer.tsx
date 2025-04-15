@@ -4,7 +4,6 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
   
   const socialLinks = [
-    { icon: "fa-github", url: "#" },
     { icon: "fa-linkedin-in", url: "#" },
     { icon: "fa-whatsapp", url: "#" },
     { icon: "fa-twitter", url: "#" }
