@@ -17,7 +17,7 @@ export default function TestimonialsSection() {
     if (autoplay) {
       autoplayRef.current = setInterval(() => {
         setActiveIndex((prev) => (prev + 1) % testimonials.length);
-      }, 5000);
+      }, 1000);
     }
     
     return () => {

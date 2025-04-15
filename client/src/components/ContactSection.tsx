@@ -104,7 +104,6 @@ export default function ContactSection() {
   ];
   
   const socialLinks = [
-    { icon: "fa-github", url: "#" },
     { icon: "fa-linkedin-in", url: "#" },
     { icon: "fa-whatsapp", url: "#" },
     { icon: "fa-twitter", url: "#" }
